@@ -1,0 +1,6 @@
+apiVersion: zenko.mycompany.com/v1
+kind: ZenkoAccount
+metadata:
+  name: zenko-account-${account}
+spec:
+  account: ${account}

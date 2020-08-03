@@ -1,0 +1,18 @@
+apiVersion: cloud.mycompany.com/v1
+kind: VirtualMachinePool
+metadata:
+  name: vmpool-${customer}
+${yamlencode({
+  "spec": {
+    "cloud": {
+      "provider": "${provider}"
+    },
+    "customer": "${customer}",
+    "web": {
+      "replicas": 2
+    },
+    "database": {
+      "replicas": 2
+    }
+  }
+})}

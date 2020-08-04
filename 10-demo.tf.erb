@@ -30,7 +30,7 @@ resource "azurerm_storage_account" "<%= ckey %>" {
   enable_https_traffic_only = true
 }
 
-resource "vault_generic_secret" "demo-<%= ckey %>" {
+resource "vault_generic_secret" "<%= ckey %>" {
   path = "customers/azure/accounts/<%= ckey %>"
   data_json = <<EOT
 {

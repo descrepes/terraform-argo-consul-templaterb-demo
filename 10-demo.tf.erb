@@ -51,7 +51,7 @@ resource "azurerm_storage_container" "<%= ckey %>-<%= environment %>" {
   depends_on = [azurerm_storage_account.<%= ckey %>]
 }
 
-resource "cloudflare_record" "cf-<%= ckey %>-<%= environment %>" {
+resource "cloudflare_record" "<%= ckey %>-<%= environment %>" {
   zone_id = "${var.cloudflare_zone_id}"
   name    = "<%= ckey %>.<%= environment %>"
   value   = "xxx.xxx.xxx.xxx"
